@@ -12,3 +12,15 @@
 ## Association
 - belongs_to :author, class_name: "Member", foreign_key: "member_id"
 - has_many :images, class_name: "EntryImage"
+
+## Membersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|full_name|string|
+|email|string|
+|birthday|date|
+|administrator|boolean|default: false, null: false|
+
+## Association
+- has_many :entries, dependent: :destroy
