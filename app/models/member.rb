@@ -1,6 +1,6 @@
 class Member < ApplicationRecord
   has_secure_password
-  
+
   has_many :entries, dependent: :destroy
 
   validates :name, presence: true,
@@ -8,7 +8,7 @@ class Member < ApplicationRecord
               allow_blank: true,
               message: :invalid_member_name },
     length: { minimum: 2, maximum: 20, allow_blank: true },
-    uniqueness: { case_sensitive: false }
+    uniqueness: { case_sensitve: false }
   validates :full_name, presence: true, length: { maximum: 20 }
   validates :email, email: { allow_blank: true }
 
