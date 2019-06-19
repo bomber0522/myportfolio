@@ -1,5 +1,5 @@
-class EintriesController < ApplicationController
-  before_action :login_require, except: [:index, :show]
+class EntriesController < ApplicationController
+  before_action :login_required, except: [:index, :show]
 
   def index
     if params[:member_id]
@@ -9,7 +9,8 @@ class EintriesController < ApplicationController
       @entries = Entry.all
     end
 
-    @entries = @entries.readable_for(current_member).order(posted_at: :desc).page(params[:page]).per(3)
+    @entries = @entries.readable_for(current_member)
+      .order(posted_at: :desc).page(params[:page]).per(3)
   end
 
   def show
@@ -62,4 +63,3 @@ class EintriesController < ApplicationController
     )
   end
 end
-

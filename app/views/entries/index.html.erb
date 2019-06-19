@@ -11,8 +11,8 @@
     <p class="entry-content"><%= truncate(entry.body, length: 80) %>
     <%= link_to "もっと読む", entry %></p>
   <%= render "footer", entry: entry %>
-  <% end %>
-    <%= paginate @entries %>
-  <% else %>
-    <div class="no-eintries">記事がありません。</div>
+<% end %>
+  <%= paginate @entries %>
+<% else %>
+  <div class="no-entries">記事がありません。</div>
 <% end %>
