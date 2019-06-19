@@ -1,0 +1,11 @@
+<h3><%= link_to "ソースがこちら", "https://github.com/bomber0522/online_shop", :taget=>["_blank"] %> |</h3>
+<div class="copyright">Copyright (C) Takaki Nakamura 2019</div>
+
+<%= render "shared/login_form" unless current_member %>
+
+<% if current_member %>
+  <ul class="account-menu">
+    <%= menu_link_to current_member.name + "さん", :account %>
+    <%= menu_link_to "ログアウト", :session, method: :delete, data: { confirm: "ログアウトしますか？" } %>
+  </ul>
+<% end %>
