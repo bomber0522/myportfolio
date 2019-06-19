@@ -14,4 +14,9 @@ Rails.application.routes.draw do
       patch :move_higher, :move_lower, on: :member
     end
   end
+
+  namespace :admin do
+    root to: "top#index"
+    resources :members
+  end
 end
