@@ -1,0 +1,22 @@
+<table class="member-show" border="1">
+  <tr>
+    <th class="member-username">ユーザー名</th>
+    <td class="member-names"><%= @member.name %></td>
+  </tr>
+  <tr>
+    <th class="member-fullname">氏名</th>
+    <td class="member-names"><%= @member.full_name %></td>
+  </tr>
+  <tr>
+    <th class="member-username">誕生日</th>
+    <td class="member-naems"><%= @member.birthday&. strftime("%Y%m月%d日") %></td>
+  </tr>
+  <tr>
+    <th class="member-username">メールアドレス</th>
+    <td class="member-names"><%= @member.email %></td>
+  </tr>
+  <tr>
+    <th class="member-username">管理者</th>
+    <td class="member-names"><%= @member.administrator? ? "○" : "-" %></td>
+  </tr>
+</table>
