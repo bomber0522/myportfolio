@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   root 'profile_pages#home'
+
   resources :members, only: [:index, :show] do
     resources :entries, only: [:index]
   end
 
-  resources :session, only: [:create, :destroy]
-  resources :account, only: [:show, :edit, :update]
-  resources :password, only: [:show, :edit, :update]
+  resource :session, only: [:create, :destroy]
+  resource :account, only: [:show, :edit, :update]
+  resource :password, only: [:show, :edit, :update]
 
   resources :entries do
     resources :images, controller: "entry_images" do
