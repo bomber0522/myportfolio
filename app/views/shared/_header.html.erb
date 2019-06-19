@@ -1,0 +1,9 @@
+<%= image_tag "taka_portfolio.png", size: "400x80", alt: "Taka's Portfolio", :class => "logos" %>
+
+<%=
+  if controller.kind_of?(Admin::Base)
+    render "shared/admin_menubar"
+  else
+    render "shared/menubar"
+  end
+%>

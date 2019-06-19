@@ -1,2 +1,8 @@
-<h1>Eintries#show</h1>
-<p>Find me in app/views/eintries/show.html.erb</p>
+<% @page_title = @entry.title %>
+<h1 class="member-entries">作品</h1>
+<h2 class="entry-title"><%= entry.title %></h2>
+
+<div class="first-image"><%= the_first_image(@entry) %></div>
+<%= auto_link simple_format(@entry.body, :class=> "entry-body"), html: {target: '_blank'} %>
+<div class="first-image"><%= other_images(@entry) %></div>
+<%= render "footer", entry: @entry %>
