@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def login__required
+  def login_required
     raise LoginRequired unless current_member
   end
 end

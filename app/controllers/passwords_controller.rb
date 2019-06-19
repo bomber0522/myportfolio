@@ -9,7 +9,7 @@ class PasswordsController < ApplicationController
     @member = current_member
   end
 
-  def updage
+  def update
     @member = current_member
     current_password = account_params[:current_password]
 
@@ -17,7 +17,7 @@ class PasswordsController < ApplicationController
       if @member.authenticate(current_password)
         @member.assign_attributes(account_params)
         if @member.save
-          redirct_to :account, notice: "パスワードを変更しました。"
+          redirect_to :account, notice: "パスワードを変更しました。"
         else
           @member.errors.add(:current_password, :wrong)
           render "edit"

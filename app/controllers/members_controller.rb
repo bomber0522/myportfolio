@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :login_required
-  
+
   def index
     @members = Member.all
   end

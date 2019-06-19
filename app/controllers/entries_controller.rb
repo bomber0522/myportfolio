@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :login_required, except: [:index, :show]
+  before_action :login_url, except: [:index, :show]
 
   def index
     if params[:member_id]
@@ -8,9 +8,8 @@ class EntriesController < ApplicationController
     else
       @entries = Entry.all
     end
-
     @entries = @entries.readable_for(current_member)
-      .order(posted_at: :desc).page(params[:page]).per(3)
+      .order(posted_at: :desc).paginate(page: params[:page], per_page: 3)
   end
 
   def show
@@ -25,16 +24,6 @@ class EntriesController < ApplicationController
     @entry = current_member.entries.find(params[:id])
   end
 
-  def create
-    @entry = Entry.new(entry_params)
-    @entry.author = current_member
-    if @entry.save
-      redirect_to @entry, notice: "記事を作成しました。"
-    else
-      render "new"
-    end
-  end
-
   def update
     @entry = current_member.entries.find(params[:id])
     @entry.assign_attributes(entry_params)
@@ -45,14 +34,40 @@ class EntriesController < ApplicationController
     end
   end
 
-  def destroy
-    @entry = current_member.entries.find(params[:id])
-    @entry.destroy
-    redirect_to :entries, notice: "記事を削除しました。"
+  def create
+    @entry = Entry.new(entry_params)
+    @entry.author = current_member
+    if @entry.save
+      redirect_to @entry, notice: "記事を作成しました。"
+    else
+      render "new"
+    end
   end
 
-  private
+    def destroy
+      @entry = current_member.entries.find(params[:id])
+      @entry.destroy
+      redirect_to :entries, notice: "記事を削除しました。"
+    end
 
+    def like
+      @entry = Entry.published.find(params[:id])
+      current_member.voted_entries << @entry
+      redirect_to @entry, notice: "投票しました。"
+    end
+
+    def unlike
+    current_member.voted_entries.destroy(Entry.find(params[:id]))
+    redirect_to :voted_entries, notice: "削除しました。"
+  end
+
+    def voted
+      @entries = current_member.voted_entries.published
+        .order("votes.created_at DESC")
+        .paginate(page: params[:page], per_page: 15)
+    end
+
+  private
   def entry_params
     params.require(:entry).permit(
       :member_id,
