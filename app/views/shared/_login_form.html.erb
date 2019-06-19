@@ -1,0 +1,17 @@
+<% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
+<% form_tag :session do %>
+<table class="admin-title" border="2">
+  <tr><th class="for-admin" colspan="2">管理者用</th></tr>
+  <tr>
+    <th><label class="user-login">ユーザー名</label></th>
+    <td><input type="text" class="in-name" name="name"></td>
+  </tr>
+  <tr>
+    <th><label class="user-pass">パスワード</label></th>
+    <td><input type="password" class="in-pass" name="password"></td>
+  </tr>
+</table>
+
+  <input type="submit" class="bu-login" value="ログイン"><br><br>
+
+<% end %>
