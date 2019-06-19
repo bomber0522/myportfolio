@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :session, only: [:create, :destroy]
   resources :account, only: [:show, :edit, :update]
-  resouces :password, only: [:show, :edit, :update]
+  resources :password, only: [:show, :edit, :update]
 
   resources :entries do
     resources :images, controller: "entry_images" do
