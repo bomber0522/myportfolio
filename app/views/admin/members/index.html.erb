@@ -1,0 +1,31 @@
+<% @page_title = "会員管理" %>
+
+<h1 class="member-list"><%= @page_title %></h1>
+
+<div class="setup-member"><%= link_to "会員の新規登録", :new_admin_member %></div>
+
+<% if  @members.present? %>
+  <table class="admin-member-index" border="1">
+    <thead>
+      <tr>
+        <th class="admin-member-username">ユーザー名</th>
+        <th class="admin-member-fullname">氏名</th>
+        <th class="member-control">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @members.each do |member| %>
+        <tr>
+          <td class="member-names"><%= link_to member.name, [:admin, member] %></td>
+          <td class="member-names"><%= member.full_name %></td>
+          <td class="member-names">
+            <%= link_to "編集", [:edit, :admin, member] %>
+            <%= link_to "削除", [:admin, member], method: :delete, data: { confirm: "本当に削除しますか？" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>会員情報がありません。</p>
+<% end %>
