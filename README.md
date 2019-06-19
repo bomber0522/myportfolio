@@ -24,3 +24,13 @@
 
 ## Association
 - has_many :entries, dependent: :destroy
+
+## Entry_imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|entry|references|
+|alt_text|string|null: false, default: ""|
+|position|integer|
+
+## Associatio
+- belongs_to :entry
