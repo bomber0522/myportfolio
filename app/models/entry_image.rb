@@ -9,7 +9,7 @@ class EntryImage < ApplicationRecord
 
   validate if: :new_data do
     if new_data.respond_to?(:content_type)
-      unless new_data.content_type.in?(ALLOWED_CONTNET_TYPES)
+      unless new_data.content_type.in?(ALLOWED_CONTENT_TYPES)
         errors.add(:new_data, :invalid_type)
       end
     else

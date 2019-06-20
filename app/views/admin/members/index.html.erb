@@ -4,7 +4,7 @@
 
 <div class="setup-member"><%= link_to "会員の新規登録", :new_admin_member %></div>
 
-<% if  @members.present? %>
+<% if @members.present? %>
   <table class="admin-member-index" border="1">
     <thead>
       <tr>
@@ -20,7 +20,8 @@
           <td class="member-names"><%= member.full_name %></td>
           <td class="member-names">
             <%= link_to "編集", [:edit, :admin, member] %>
-            <%= link_to "削除", [:admin, member], method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            <%= link_to "削除", [:admin, member], method: :delete,
+                data: { confirm: "本当に削除しますか？" } %>
           </td>
         </tr>
       <% end %>
