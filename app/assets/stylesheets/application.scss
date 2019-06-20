@@ -24,16 +24,16 @@
     margin: 0; padding: 0;
     font-family: Meiryo, sans-serif;
   }
-  /* リンク */
+  
   a:link { color: #00c; }
   a:visited { color: #00c; }
   a:hover { color: #f00; }
   a img { border: none; }
-  /* ブロック要素 */
+  
   p, h1, h2, h3, table, ul {
     margin: 0 0 1em;
   }
-  /* ナビゲーション */
+ 
   nav ul,
   ul.toolbar,
   ul.links {
@@ -47,19 +47,19 @@
   ul.links li {
     display: inline;
   }
-  /* 全体の枠 */
+
   div#container {
   margin: 0 auto;
   padding-top: 5px;
   width: 780px;
   }
-  /* 左の枠（コンテンツを入れる） */
+ 
   main {
     float: left;
     width: 530px;
     padding: 10px 10px 10px 0;
   }
-  /* 右の枠（サイドバーを入れる） */
+ 
   aside#sidebar {
     float: left;
     width: 230px;
@@ -67,7 +67,7 @@
     padding: 5px;
     font-size: 86%;
   }
-  /* ヘッダー */
+ 
   header {
     background-color: red;
     width: 780px;
@@ -80,7 +80,7 @@
     text-align: left;
     margin-left: 40px;
   }
-  /* フッター */
+ 
   footer {
     clear: both;
     color: #888;
@@ -102,7 +102,7 @@
     margin-top: -56px;
     margin-right: 50px;
   }
-  /* メニューバー */
+
   nav.menubar {
     height: 80px;
     padding-top: 15px;
@@ -116,23 +116,23 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* メニューバーのリンク */
+  
   nav.menubar a { text-decoration: none; }
-  /* メニューバーのリンク（未訪問） */
+  
   nav.menubar a:link { color: #ccc; }
-  /* メニューバーのリンク（訪問済） */
+  
   nav.menubar a:visited { color: #ccc; }
-  /* メニューバーのリンク（マウスを合わせたとき） */
+ 
   nav.menubar a:hover {
     color: #f88;
     text-decoration: underline;
   }
-  /* メニューバーのリンク（現在のページ） */
+ 
   nav.menubar span {
     color: #ff8;
     font-weight: bold;
   }
-  /* メインコンテンツ */
+
   main {
   margin-top: 170px;
   }
@@ -165,7 +165,7 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* サイドバー */
+
   .admin-title {
     width: 500px;
     margin-top: 0px;
@@ -251,16 +251,16 @@
     margin-left: 300px;
     font-family: Meiryo, sans-serif;
   }
-  /* リンク */
+  
   a:link { color: #00c; }
   a:visited { color: #00c; }
   a:hover { color: #f00; }
   a img { border: none; }
-  /* ブロック要素 */
+  
   p, h1, h2, h3, table, ul {
     margin: 0 0 1em;
   }
-  /* ナビゲーション */
+
   nav ul,
   ul.toolbar,
   ul.links {
@@ -274,26 +274,26 @@
   ul.links li {
     display: inline;
   }
-  /* 全体の枠 */
+
   div#container {
   margin: 0 auto;
   padding-top: 5px;
   width: 780px;
   }
-  /* 左の枠（コンテンツを入れる） */
+
   main {
     float: left;
     width: 530px;
     padding: 10px 10px 10px 0;
   }
-  /* 右の枠（サイドバーを入れる） */
+
   aside#sidebar {
     float: left;
     width: 230px;
     background-color: #e8ffff;
     padding: 5px;
   }
-  /* ヘッダー */
+
   header {
     height: 60px;
     background-color: red;
@@ -307,7 +307,7 @@
     margin-left: 30px;
     margin-top: -15px;
   }
-  /* フッター */
+
   footer {
     clear: both;
     color: #888;
@@ -330,7 +330,7 @@
   margin-top: -38px;
   margin-right: 216px;
   }
-  /* メニューバー */
+
   nav.menubar {
     height: 50px;
     padding-top: 10px;
@@ -344,23 +344,23 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* メニューバーのリンク */
+ 
   nav.menubar a { text-decoration: none; }
-  /* メニューバーのリンク（未訪問） */
+
   nav.menubar a:link { color: #ccc; }
-  /* メニューバーのリンク（訪問済） */
+ 
   nav.menubar a:visited { color: #ccc; }
-  /* メニューバーのリンク（マウスを合わせたとき） */
+
   nav.menubar a:hover {
     color: #f88;
     text-decoration: underline;
   }
-  /* メニューバーのリンク（現在のページ） */
+
   nav.menubar span {
     color: #ff8;
     font-weight: bold;
   }
-  /* メインコンテンツ */
+
   main {
   margin-top: 170px;
   }
@@ -392,7 +392,7 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* サイドバー */
+
   .admin-title {
     width: 370px;
     margin-top: 0px;
@@ -458,7 +458,7 @@
     margin-bottom: 0.3em;
   }
   .profile-title {
-    // font-size: 35px;
+
     color: red;
     margin-left: -30px;
     border-bottom: 2px solid #88c;
@@ -484,16 +484,16 @@
     margin-left: 300px;
     font-family: Meiryo, sans-serif;
   }
-  /* リンク */
+
   a:link { color: #00c; }
   a:visited { color: #00c; }
   a:hover { color: #f00; }
   a img { border: none; }
-  /* ブロック要素 */
+
   p, h1, h2, h3, table, ul {
     margin: 0 0 1em;
   }
-  /* ナビゲーション */
+
   nav ul,
   ul.toolbar,
   ul.links {
@@ -507,26 +507,26 @@
   ul.links li {
     display: inline;
   }
-  /* 全体の枠 */
+
   div#container {
   margin: 0 auto;
   padding-top: 5px;
   width: 780px;
   }
-  /* 左の枠（コンテンツを入れる） */
+
   main {
     float: left;
     width: 530px;
     padding: 10px 10px 10px 0;
   }
-  /* 右の枠（サイドバーを入れる） */
+
   aside#sidebar {
     float: left;
     width: 230px;
     background-color: #e8ffff;
     padding: 5px;
   }
-  /* ヘッダー */
+
   header {
     height: 60px;
     background-color: red;
@@ -536,12 +536,11 @@
     padding-top: 4px;
   }
   ul.account-menu {
-    // font-size: 35px;
     text-align: left;
     margin-left: 30px;
     margin-top: -15px;
   }
-  /* フッター */
+
   footer {
     clear: both;
     color: #888;
@@ -564,7 +563,7 @@
   margin-top: -38px;
   margin-right: 216px;
   }
-  /* メニューバー */
+
   nav.menubar {
     height: 50px;
     padding-top: 10px;
@@ -578,23 +577,23 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* メニューバーのリンク */
+
   nav.menubar a { text-decoration: none; }
-  /* メニューバーのリンク（未訪問） */
+
   nav.menubar a:link { color: #ccc; }
-  /* メニューバーのリンク（訪問済） */
+
   nav.menubar a:visited { color: #ccc; }
-  /* メニューバーのリンク（マウスを合わせたとき） */
+
   nav.menubar a:hover {
     color: #f88;
     text-decoration: underline;
   }
-  /* メニューバーのリンク（現在のページ） */
+
   nav.menubar span {
     color: #ff8;
     font-weight: bold;
   }
-  /* メインコンテンツ */
+
   main {
   margin-top: 170px;
   }
@@ -626,7 +625,7 @@
     content: " | ";
     margin: 0 2px;
   }
-  /* サイドバー */
+
   .admin-title {
     width: 370px;
     margin-top: 0px;
@@ -693,7 +692,6 @@
     margin-bottom: 0.3em;
   }
   .profile-title {
-    // font-size: 35px;
     color: red;
     margin-left: -30px;
     border-bottom: 2px solid #88c;

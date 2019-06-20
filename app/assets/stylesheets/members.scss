@@ -2,7 +2,6 @@
   .member-list {
     font-size: 35px;
     color: red;
-    // margin-left: -5px;
     margin-top: 15px;
     padding-bottom: 15px;
     border-bottom: 2px solid #88c;
@@ -37,7 +36,6 @@
     font-size: 30px;
     background-color: rgba( 255,255,240 , 0.36 );
   }
-  /* メンバー詳細 */
   .setup-member {
     font-size: 30px;
     margin-left: 40px;
@@ -81,7 +79,6 @@
   .member-email {
     width: 350px;
   }
-  /* マイアカウント */
   .account-table {
     width: 700px;
     height: 300px;
@@ -91,13 +88,10 @@
 }
 
 @media screen and (min-width:960px) and ( max-width:1280px){
-  /* 表：一覧表示、詳細表示 */
   .member-list {
     font-size: 25px;
     color: red;
-    // margin-left: -5px;
     margin-top: -50px;
-    // padding-bottom: 15px;
     border-bottom: 2px solid #88c;
     text-align: center;
     width: 780px;
@@ -130,7 +124,6 @@
     font-size: 20px;
     background-color: rgba( 255,255,240 , 0.36 );
   }
-  /* メンバー詳細 */
   .setup-member {
     margin-left: 40px;
     padding-bottom: 20px;
@@ -168,7 +161,6 @@
   .member-email {
     width: 300px;
   }
-  /* マイアカウント */
   .account-table {
     width: 700px;
     height: 300px;
@@ -215,7 +207,6 @@
     font-size: 20px;
     background-color: rgba( 255,255,240 , 0.36 );
   }
-  /* メンバー詳細 */
   .setup-member {
     margin-left: 40px;
     padding-bottom: 20px;
@@ -254,7 +245,6 @@
   .member-email {
     width: 300px;
   }
-  /* マイアカウント */
   .account-table {
     width: 700px;
     height: 300px;
