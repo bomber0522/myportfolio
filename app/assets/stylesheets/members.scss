@@ -1,3 +1,264 @@
-// Place all the styles related to the members controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media screen and (min-width:780px) and ( max-width:812px) {
+  .member-list {
+    font-size: 35px;
+    color: red;
+    // margin-left: -5px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #88c;
+    text-align: center;
+    width: 780px;
+  }
+  .member-show {
+    width: 700px;
+    height: 300px;
+    margin-left: 40px;
+  }
+  .member-index {
+    width: 500px;
+    height: 200px;
+    margin-left: 135px;
+  }
+  .member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 30px;
+  }
+  .member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 30px;
+  }
+  .member-names {
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba( 255,255,240 , 0.36 );
+  }
+  /* メンバー詳細 */
+  .setup-member {
+    font-size: 30px;
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .setup-edit {
+    font-size: 30px;
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .setup-show {
+    font-size: 30px;
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .admin-member-index {
+    width: 700px;
+    height: 200px;
+    margin-left: 40px;
+  }
+  .admin-member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 30px;
+  }
+  .admin-member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 30px;
+  }
+  .member-control {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 30px;
+  }
+  .member-email {
+    width: 350px;
+  }
+  /* マイアカウント */
+  .account-table {
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width:960px) and ( max-width:1280px){
+  /* 表：一覧表示、詳細表示 */
+  .member-list {
+    font-size: 25px;
+    color: red;
+    // margin-left: -5px;
+    margin-top: -50px;
+    // padding-bottom: 15px;
+    border-bottom: 2px solid #88c;
+    text-align: center;
+    width: 780px;
+  }
+  .member-show {
+    width: 700px;
+    height: 300px;
+    margin-left: 40px;
+  }
+  .member-index {
+    width: 500px;
+    height: 200px;
+    margin-left: 135px;
+  }
+  .member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 20px;
+  }
+  .member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 20px;
+  }
+  .member-names {
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba( 255,255,240 , 0.36 );
+  }
+  /* メンバー詳細 */
+  .setup-member {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .setup-edit {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .setup-show {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .admin-member-index {
+    width: 700px;
+    height: 300px;
+    margin-left: 40px;
+  }
+  .admin-member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .admin-member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .member-control {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .member-email {
+    width: 300px;
+  }
+  /* マイアカウント */
+  .account-table {
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .member-list {
+    font-size: 25px;
+    color: red;
+    margin-top: -50px;
+    border-bottom: 2px solid #88c;
+    text-align: center;
+    width: 780px;
+  }
+  .member-show {
+    width: 700px;
+    height: 300px;
+    margin-left: 40px;
+  }
+  .member-index {
+    width: 500px;
+    height: 200px;
+    margin-left: 135px;
+  }
+  .member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+    font-size: 20px;
+  }
+  .member-names {
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba( 255,255,240 , 0.36 );
+  }
+  /* メンバー詳細 */
+  .setup-member {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+
+  .setup-edit {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .setup-show {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+  .admin-member-index {
+    width: 700px;
+    height: 300px;
+    margin-left: 40px;
+  }
+  .admin-member-username {
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .admin-member-fullname {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .member-control {
+    width: 230px;
+    color :red;
+    background-color: rgba( 173,255,47 , 0.54 );
+    text-align: center;
+  }
+  .member-email {
+    width: 300px;
+  }
+  /* マイアカウント */
+  .account-table {
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}
