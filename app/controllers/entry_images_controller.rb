@@ -8,7 +8,6 @@ class EntryImagesController < ApplicationController
   def index
     @images = @entry.images.order(:position)
   end
-  
   def show
     redirect_to action: "edit"
   end
