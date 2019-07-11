@@ -1,35 +1,36 @@
 <%= render "shared/errors", obj: @member %>
-<table class="admin-table" border="1">
+
+<table class="attr" border="1">
   <tr>
-    <th class="member-username"><%= form.label :name %></th>
-    <td class="member-names"><%= form.text_field :name %></td>
+    <th><%= form.label :name %></th>
+    <td><%= form.text_field :name %></td>
   </tr>
   <tr>
-    <th class="member-fullname"><%= form.label :full_name %></th>
-    <td class="member-names"><%= form.text_field :full_name %></td>
+    <th><%= form.label :full_name %></th>
+    <td><%= form.text_field :full_name %></td>
   </tr>
   <tr>
-    <th class="member-username"><%= form.label :birthday, for: "member_birthday_1i" %></th>
-    <td class="member-names"><%= form.date_select :birthday,
+    <th><%= form.label :birthday, for: "member_birthday_1i" %></th>
+    <td><%= form.date_select :birthday,
             start_year: 1940, end_year: Time.current.year,
             use_month_numbers: true %></td>
   </tr>
   <tr>
-    <th class="member-username"><%= form.label :email %></th>
-    <td class="member-names"><%= form.text_field :email, :class => "member-email" %></td>
+    <th><%= form.label :email %></th>
+    <td><%= form.text_field :email, :class => "member-email" %></td>
   </tr>
   <% if @member.new_record? %>
     <tr>
-      <th class="member-username"><%= form.label :password, "パスワード" %></th>
-      <td class="member-names"><%= form.text_field :password %></td>
+      <th><%= form.label :password, "パスワード" %></th>
+      <td><%= form.text_field :password %></td>
     </tr>
   <% end %>
   <% if controller.kind_of?(Admin::MembersController) %>
     <tr>
-      <th class="member-username"><%= Member.human_attribute_name(:administrator) %></th>
-      <td class="member-names">
+      <th><%= Member.human_attribute_name(:administrator) %></th>
+      <td>
         <%= form.check_box :administrator,
-            disabled: !current_member.administrator?, :class => "chkbox" %>
+            disabled: !current_member.administrator? %>
         <%= form.label :administrator %>
       </td>
     </tr>

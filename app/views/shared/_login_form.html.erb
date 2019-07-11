@@ -1,17 +1,19 @@
 <% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
-<%= form_tag :session do %>
-<table  class="admin-title" border="2">
-  <tr><th class="for-admin" colspan="2">管理者用</th></tr>
-  <tr>
-    <th><label class="user-login">ユーザー名</label></th>
-    <td><input type="text" class="in-name" name="name"></td>
-  </tr>
-  <tr>
-    <th><label class="user-pass">パスワード</label></th>
-    <td><input type="password" class="in-pass" name="password"></td>
-  </tr>
-</table>
-
-  <input type="submit" class="bu-login" value="ログイン"><br><br>
-
+<div class="login__form">
+<%= form_tag :session, id: "login-form" do %>
+  <div class="admin__name">
+    管理者用
+  </div>
+  <div>
+    <label>ユーザー名</label>
+    <input type="text" name="name">
+  </div>
+  <div>
+    <label class="user-pass">パスワード</label>
+    <input type="password" name="password">
+  </div>
+  <div>
+    <input type="submit" class="login__button" value="ログイン"><br><br>
+  </div>
 <% end %>
+</div>

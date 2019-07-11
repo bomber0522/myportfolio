@@ -1,10 +1,10 @@
 <% @page_title = "マイアカウント" %>
 
-<h1 class="member-list"><%= @page_title %></h1>
+<h1><%= @page_title %></h1>
 
-<ul class="setup-member">
-  <%= menu_link_to "アカウント情報の編集", :edit_account %>
+<div class="toolbar">
+  <%= menu_link_to "アカウント情報の編集", :edit_account %> <span class="account__pipe">|</span>
   <%= menu_link_to "パスワードの変更", :edit_password %>
-</ul>
+</div>
 
 <%= render "members/body" %>

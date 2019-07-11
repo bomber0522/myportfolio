@@ -1,32 +1,36 @@
 <% @page_title = "ブログ記事の画像" %>
-<h1 class="member-list"><%= @page_title %></h1>
-<h2 class="entry-title"><%= @entry.title %></h2>
+<h1><%= @page_title %></h1>
 
-<ul class="account-menu">
+<div class="entries__show">
+  <h2 class="entries__title"><%= @entry.title %></h2>
+</div>
+
+<div class="tools">
+<ul class="toolbar">
   <%= menu_link_to "ブログ記事に戻る", @entry %>
   <%= menu_link_to "画像の追加", [:new, @entry, :image] %>
 </ul>
 
 <% if @images.present? %>
-  <table class="admin-member-index" border="1">
+  <table class="list" border="1">
     <thead>
       <tr>
-        <th class="admin-member-username">番号</th>
-        <th class="member-control">画像</th>
-        <th class="admin-member-fullname">代替テキスト</th>
-        <th class="member-control">操作</th>
+        <th>番号</th>
+        <th>画像</th>
+        <th>代替テキスト</th>
+        <th>操作</th>
       </tr>
     </thead>
     <tbody>
       <% @images.each_with_index do |image, index| %>
         <tr>
-          <td class="member-names"><%= index + 1 %></td>
-          <td class="member-names">
+          <td><%= index + 1 %></td>
+          <td>
             <%= image_tag image.data.variant(resize: "100x>"),
               alt: image.alt_text %>
           </td>
-          <td class="member-names"><%= image.alt_text %></td>
-          <td class="member-names">
+          <td><%= image.alt_text %></td>
+          <td>
             <div>
               <%= link_to "編集", edit_entry_image_path(@entry, image) %> |
               <%= link_to "削除", entry_image_path(@entry, image),
@@ -48,3 +52,4 @@
 <% else %>
   <div class="no-entries">画像がありません。</div>
 <% end %>
+</div>

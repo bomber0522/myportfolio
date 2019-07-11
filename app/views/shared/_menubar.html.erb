@@ -4,6 +4,7 @@
     <%= menu_link_to "作品", :entries %>
     <% if current_member %>
       <%= menu_link_to "会員名簿", :members %>
+      <%= menu_link_to "ブログ記事の作成", :new_entry %>
       <% if current_member.administrator? %>
         <%= menu_link_to "管理ページ", :admin_root %>
       <% end %>

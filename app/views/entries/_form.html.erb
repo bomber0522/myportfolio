@@ -1,22 +1,22 @@
 <%= render "shared/errors", obj: @entry %>
 
-<table class="entry-table" border="1">
+<table class="attr" border="1">
   <tr>
-    <th class="entry-sub" width="120"><%= form.label :title %></th>
-    <td class="table-field"><%= form.text_field :title, size: 50, :class => "text-form" %></td>
+    <th width="80"><%= form.label :title %></th>
+    <td><%= form.text_field :title, size: 50 %></td>
   </tr>
   <tr>
     <th><%= form.label :body %></th>
-    <td class="area-field"><%= form.text_area :body, rows: 10, cols: 45, size: "60x10", :class => "area-form" %></td>
+    <td><%= form.text_area :body, rows: 10, cols: 45 %></td>
   </tr>
   <tr>
     <th><%= form.label :posted_at, for: "entry_posted_at_1i" %></th>
-    <td class="entry-date"><%= form.datetime_select :posted_at,
+    <td><%= form.datetime_select :posted_at,
             start_year: 2000, end_year: Time.current.year + 1 ,
             use_month_numbers: true %></td>
   </tr>
   <tr>
     <th><%= form.label :status %></th>
-    <td class="member-names"><%= form.select :status, Entry.status_options %></td>
+    <td><%= form.select :status, Entry.status_options %></td>
   </tr>
 </table>
