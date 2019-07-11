@@ -1,39 +1,255 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "admin/top";
+@import "reset";
 @import "admin";
 @import "entries";
 @import "entry_images";
 @import "errors";
 @import "flash";
-@import "header";
-@import "members";
+@import "login";
 @import "pagination";
-@import "passwords";
-@import "profile_pages";
-@import "sessions";
 @import "table";
 
+* {
+  box-sizing: border-box;
+}
 
- @media screen and (min-width:780px) and ( max-width:812px) {
+body {
+  background-color: white;
+  color: black;
+  margin: 0 auto; padding: 0;
+  font-family: Meiryo, sans-serif;
+  width: 780px;
+  background-image: url("/portfolio_pic.png");
+  background-size: contain;
+}
+
+/* リンク */
+a:link { color: #00c; }
+a:visited { color: #00c; }
+a:hover { color: #f00; }
+a img { border: none; }
+
+/* ブロック要素 */
+p, h1, h2, h3, table, ul {
+  margin: 0 0 1em;
+}
+
+.members__control {
+  margin-top: 15px;
+}
+
+/* ナビゲーション */
+nav ul,
+ul.toolbar,
+ul.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li,
+div.toolbar li,
+ul.toolbar li,
+ul.links li {
+  display: inline;
+}
+
+/* 全体の枠 */
+div#container {
+  width: 780px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+/* 左の枠（コンテンツを入れる） */
+main {
+  float: left;
+  width: 530px;
+  padding: 10px 10px 10px 0;
+  padding-top: 100px;
+}
+
+/* ヘッダー */
+header {
+  border-top: 4px solid #6bb;
+  background-color: red;
+  padding-top: 4px;
+  position: fixed;
+  width: 780px;
+  text-align: center;
+}
+
+ul.account-menu {
+  position: absolute;
+  margin-left: 80px;
+}
+
+/* フッター */
+footer {
+  clear: both;
+  font: 11px Verdana;
+  color: #888;
+  padding: 8px 0;
+  border-top: 4px solid #6bb;
+  text-align: center;
+}
+
+footer nav ul li:not(:last-child):after {
+  color: #888;
+  content: " | ";
+  margin: 0 5px;
+}
+
+/* メニューバー */
+nav.menubar {
+  padding: 2px;
+  background-color: #000;
+  color: #ccc;
+  font-size: 80%;
+  padding: 8px 16px;
+}
+
+nav.menubar ul li:not(:last-child):after {
+  color: #ccc;
+  content: " | ";
+  margin: 0 2px;
+}
+
+/* メニューバーのリンク */
+nav.menubar a { text-decoration: none; }
+
+/* メニューバーのリンク（未訪問） */
+nav.menubar a:link { color: #ccc; }
+
+/* メニューバーのリンク（訪問済） */
+nav.menubar a:visited { color: #ccc; }
+
+/* メニューバーのリンク（マウスを合わせたとき） */
+nav.menubar a:hover {
+  color: #f88;
+  text-decoration: underline;
+}
+
+/* メニューバーのリンク（現在のページ） */
+nav.menubar span {
+  color: #ff8;
+  font-weight: bold;
+}
+
+/* メインコンテンツ */
+main h1 {
+  color: #0000ff;
+  background-color: rgba( 255,0,255 , 0.15 );
+  font-weight: normal;
+  font-size: 150%;
+  border-bottom: 2px solid #88c;
+  margin-bottom: 0.5em;
+  margin-left: 250px;
+  text-align: center;
+}
+
+main h2 {
+  color: yellow;
+  background-color: gray;
+  font-weight: normal;
+  width: 200px;
+  font-size: 120%;
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #ccf;
+}
+
+main p {
+  font-size: 90%;
+  line-height: 1.5;
+}
+
+ul.toolbar {
+  margin-bottom: 5px;
+  width: 300px;
+  padding: 0 30px;
+  font-size: 90%;
+  margin: -80px 0 20px 100px;
+}
+
+div.toolbar {
+  margin: 25px 0 25px 130px;
+  font-size: 90%;
+}
+
+
+ul.toolbar li:not(:last-child):after {
+  color: #888;
+  content: " | ";
+  margin: 0 2px;
+}
+
+.account__pipe {
+  color: red;
+}
+
+
+// /* ログインフォーム */
+form#login-form {
+  font-size: 12px;
+}
+
+form#login-form div {
+  padding: 2px;
+  text-align: center;
+}
+
+form#login-form label {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  color: red;
+}
+
+form#login-form input[type="text"],
+form#login-form input[type="password"] {
+  width: 120px;
+  color: black;
+}
+
+.btn {
+  font-size: 15px;
+  height: 35px;
+  width: 80px;
+}
+
+.btn-blue {
+  margin: 20px 130px;
+}
+
+@media screen and (max-width: 670px) {
   body {
-    background-image: url("/portfolio_pic.png");
-    background-size: contain;
     background-color: white;
     color: black;
-    margin: 0; padding: 0;
+    margin: 0 auto; 
+    padding: 0;
     font-family: Meiryo, sans-serif;
+    width: 100%;
+    background-image: url("/portfolio_pic.png");
+    background-size: contain;
   }
   
+  /* リンク */
   a:link { color: #00c; }
   a:visited { color: #00c; }
   a:hover { color: #f00; }
   a img { border: none; }
   
+  /* ブロック要素 */
   p, h1, h2, h3, table, ul {
     margin: 0 0 1em;
   }
- 
+  
+  .members__control {
+    margin-top: 15px;
+  }
+  
+  /* ナビゲーション */
   nav ul,
   ul.toolbar,
   ul.links {
@@ -41,668 +257,188 @@
     margin: 0;
     padding: 0;
   }
+  
   nav ul li,
   div.toolbar li,
   ul.toolbar li,
   ul.links li {
     display: inline;
   }
-
+  
+  /* 全体の枠 */
   div#container {
-  margin: 0 auto;
-  padding-top: 5px;
-  width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5px;
   }
- 
+  
+  /* 左の枠（コンテンツを入れる） */
   main {
     float: left;
-    width: 530px;
+    width: 100%;
     padding: 10px 10px 10px 0;
+    padding-top: 110px;
+    margin: 0 10px;
   }
- 
-  aside#sidebar {
-    float: left;
-    width: 230px;
-    background-color: #e8ffff;
-    padding: 5px;
-    font-size: 86%;
-  }
- 
+  
+  /* ヘッダー */
   header {
-    background-color: red;
-    width: 780px;
     position: fixed;
     border-top: 4px solid #6bb;
+    background-color: red;
     padding-top: 4px;
+    text-align: center;
+    width: 100%;
   }
+  
   ul.account-menu {
-    font-size: 35px;
+    position: absolute;
+    margin: 10px 20px;
     text-align: left;
-    margin-left: 40px;
+    font-size: 100%;
+    line-height: 30px;
   }
- 
+  
+  /* フッター */
   footer {
+    width: 100%;
+    height: 100px;
     clear: both;
+    font: 11px Verdana;
     color: #888;
     padding: 8px 0;
     border-top: 4px solid #6bb;
+    text-align: center;
   }
+  
   footer nav ul li:not(:last-child):after {
     color: #888;
     content: " | ";
     margin: 0 5px;
   }
-  .git {
-    margin-left: 50px;
-    margin-top: 10px;
-  }
-  .copyright {
-    font-size: 25px;
-    float: right;
-    margin-top: -56px;
-    margin-right: 50px;
-  }
-
+  
+  /* メニューバー */
   nav.menubar {
-    height: 80px;
-    padding-top: 15px;
-    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 2px;
     background-color: #000;
     color: #ccc;
-    font-size: 35px;
-  }
-  nav.menubar ul li:not(:last-child):after {
-    color: #ccc;
-    content: " | ";
-    margin: 0 2px;
-  }
-  
-  nav.menubar a { text-decoration: none; }
-  
-  nav.menubar a:link { color: #ccc; }
-  
-  nav.menubar a:visited { color: #ccc; }
- 
-  nav.menubar a:hover {
-    color: #f88;
-    text-decoration: underline;
-  }
- 
-  nav.menubar span {
-    color: #ff8;
-    font-weight: bold;
-  }
-
-  main {
-  margin-top: 170px;
-  }
-  main h1 {
-    color: #88c;
-    font-weight: normal;
-    font-size: 150%;
-    margin-bottom: 0.5em;
-    width: 840px;
-  }
-  main h2 {
-    color: #99d;
-    font-weight: bold;
-    font-size: 120%;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid #ccf;
-  }
-  main p {
-    font-size: 90%;
-    line-height: 1.5;
-  }
-  ul.toolbar,
-  div.toolbar {
-    padding: 15px 0;
-    font-size: 90%;
-    text-align: right;
-  }
-  ul.toolbar li:not(:last-child):after {
-    color: #888;
-    content: " | ";
-    margin: 0 2px;
-  }
-
-  .admin-title {
-    width: 500px;
-    margin-top: 0px;
-    margin-left: 133px;
-    font-size: 30px;
-  }
-  .for-admin {
-    color: red;
-    text-align: center;
-    background-color: rgba( 123,215,249 , 0.45 );
-  }
-  .user-login {
-    color: red;
-    font-size: 25px;
-    margin-left: 20px;
-  }
-  .in-name {
-    width: 250px;
-    height: 40px;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    color: black;
-    font-size: 20px;
-  }
-  .user-pass {
-    font-size: 25px;
-    color: red;
-    margin-left: 20px;
-  }
-  .in-pass {
-    width: 250px;
-    height: 40px;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    color: black;
-    font-size: 20px;
-  }
-  .bu-login {
-    font-size: 15px;
-    color: black;
-    display: block;
-    height: 40px;
-    width: 100px;
-    margin-top: 20px;
-    margin-left: 130px;
-  }
-  aside#sidebar h2 {
-    color: #080;
-    font-weight: bold;
-    border-bottom: 1px dotted #080;
-    margin-bottom: 0.5em;
     font-size: 100%;
   }
-  aside#sidebar ul {
-    padding-left: 1em;
-    list-style-type: none;
-  }
-  aside#sidebar li {
-    margin-bottom: 0.3em;
-  }
-  .profile-title {
-    font-size: 35px;
-    color: red;
-    margin-left: -30px;
-    border-bottom: 2px solid #88c;
-    text-align: center;
-    width: 810px;
-  }
-  .logos {
-    padding-bottom: 4px;
-  }
-}
-
-@media screen and (min-width:960px) and ( max-width:1280px) {
-  body {
-    width: 780px;
-    background-image: url("/portfolio_pic.png");
-    background-size: contain;
-    background-color: white;
-    color: black;
-    margin-left: 300px;
-    font-family: Meiryo, sans-serif;
-  }
   
-  a:link { color: #00c; }
-  a:visited { color: #00c; }
-  a:hover { color: #f00; }
-  a img { border: none; }
-  
-  p, h1, h2, h3, table, ul {
-    margin: 0 0 1em;
-  }
-
-  nav ul,
-  ul.toolbar,
-  ul.links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li,
-  div.toolbar li,
-  ul.toolbar li,
-  ul.links li {
-    display: inline;
-  }
-
-  div#container {
-  margin: 0 auto;
-  padding-top: 5px;
-  width: 780px;
-  }
-
-  main {
-    float: left;
-    width: 530px;
-    padding: 10px 10px 10px 0;
-  }
-
-  aside#sidebar {
-    float: left;
-    width: 230px;
-    background-color: #e8ffff;
-    padding: 5px;
-  }
-
-  header {
-    height: 60px;
-    background-color: red;
-    width: 780px;
-    position: fixed;
-    border-top: 4px solid #6bb;
-    padding-top: 4px;
-  }
-  ul.account-menu {
-    text-align: left;
-    margin-left: 30px;
-    margin-top: -15px;
-  }
-
-  footer {
-    clear: both;
-    color: #888;
-    padding: 8px 0;
-    border-top: 4px solid #6bb;
-  }
-  footer nav ul li:not(:last-child):after {
-    color: #888;
-    content: " | ";
-    margin: 0 5px;
-  }
-  .git {
-  font-size: 17px;
-  margin-left: 50px;
-  margin-top: 0px;
-  }
-  .copyright {
-  font-size: 17px;
-  float: right;
-  margin-top: -38px;
-  margin-right: 216px;
-  }
-
-  nav.menubar {
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 20px;
-    background-color: #000;
-    color: #ccc;
-    font-size: 23px;
-  }
   nav.menubar ul li:not(:last-child):after {
     color: #ccc;
     content: " | ";
     margin: 0 2px;
   }
- 
+  
+  /* メニューバーのリンク */
   nav.menubar a { text-decoration: none; }
-
+  
+  /* メニューバーのリンク（未訪問） */
   nav.menubar a:link { color: #ccc; }
- 
+  
+  /* メニューバーのリンク（訪問済） */
   nav.menubar a:visited { color: #ccc; }
-
+  
+  /* メニューバーのリンク（マウスを合わせたとき） */
   nav.menubar a:hover {
     color: #f88;
     text-decoration: underline;
   }
-
+  
+  /* メニューバーのリンク（現在のページ） */
   nav.menubar span {
     color: #ff8;
     font-weight: bold;
   }
-
-  main {
-  margin-top: 170px;
-  }
+  
+  /* メインコンテンツ */
   main h1 {
-    color: #88c;
+    color: #0000ff;
+    background-color: rgba( 255,0,255 , 0.15 );
     font-weight: normal;
+    font-size: 150%;
+    border-bottom: 2px solid #88c;
     margin-bottom: 0.5em;
-    width: 780px;
+    margin: 0 auto;
+    text-align: center;
   }
+  
   main h2 {
-    color: #99d;
-    font-weight: bold;
+    color: yellow;
+    font-weight: normal;
     font-size: 120%;
-    margin-bottom: 0.5em;
+    margin: 0 auto 15px;
     border-bottom: 1px solid #ccf;
   }
+  
   main p {
     font-size: 90%;
     line-height: 1.5;
   }
-  ul.toolbar,
-  div.toolbar {
-    padding: 15px 0;
+  
+  ul.toolbar {
+    margin-bottom: 5px;
+    width: 300px;
+    padding: 0 30px;
     font-size: 90%;
-    text-align: right;
+    margin: 0 auto;
+    text-align: center;
   }
+  
+  div.toolbar {
+    width: 350px;
+    padding: 0 30px;
+    font-size: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  
   ul.toolbar li:not(:last-child):after {
     color: #888;
     content: " | ";
     margin: 0 2px;
   }
-
-  .admin-title {
-    width: 370px;
-    margin-top: 0px;
-    margin-left: 205px;
-    font-size: 30px;
-  }
-  .for-admin {
+  
+  .account__pipe {
     color: red;
-    font-size: 15px;
+  }
+  
+  
+  // /* ログインフォーム */
+  form#login-form {
+    font-size: 12px;
+  }
+  
+  form#login-form div {
+    padding: 2px;
     text-align: center;
-    background-color: rgba( 123,215,249 , 0.45 );
   }
-  .user-login {
-    color: red;
-    font-size: 15px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-  }
-  .in-name {
-  width: 200px;
-  height: 25px;
-  margin-top: 10px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  color: black;
-  font-size: 15px;
-  }
-  .user-pass {
-  font-size: 15px;
-  color: red;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  }
-  .in-pass {
-  width: 200px;
-  height: 25px;
-  margin-top: 10px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  color: black;
-  font-size: 20px;
-  }
-  .bu-login {
-  font-size: 10px;
-  color: black;
-  display: block;
-  height: 25px;
-  width: 70px;
-  margin-top: -10px;
-  margin-left: 205px;
-  }
-  aside#sidebar h2 {
-    color: #080;
-    font-weight: bold;
-    border-bottom: 1px dotted #080;
-    margin-bottom: 0.5em;
-  }
-  aside#sidebar ul {
-    padding-left: 1em;
-    list-style-type: none;
-  }
-  aside#sidebar li {
-    margin-bottom: 0.3em;
-  }
-  .profile-title {
-
-    color: red;
-    margin-left: -30px;
-    border-bottom: 2px solid #88c;
+  
+  form#login-form label {
+    display: inline-block;
+    width: 80px;
     text-align: center;
-    width: 780px;
+    color: red;
   }
-  .logos {
-    height: 60px;
-    width: 300px;
-    margin-top: -0.4em;
-    padding: 4px;
-    margin-left: -4px;
-  }
-}
-
-@media screen and (min-width:1281px) {
-  body {
-    width: 780px;
-    background-image: url("/portfolio_pic.png");
-    background-size: contain;
-    background-color: white;
+  
+  form#login-form input[type="text"],
+  form#login-form input[type="password"] {
+    width: 120px;
     color: black;
-    margin-left: 300px;
-    font-family: Meiryo, sans-serif;
   }
-
-  a:link { color: #00c; }
-  a:visited { color: #00c; }
-  a:hover { color: #f00; }
-  a img { border: none; }
-
-  p, h1, h2, h3, table, ul {
-    margin: 0 0 1em;
-  }
-
-  nav ul,
-  ul.toolbar,
-  ul.links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li,
-  div.toolbar li,
-  ul.toolbar li,
-  ul.links li {
-    display: inline;
-  }
-
-  div#container {
-  margin: 0 auto;
-  padding-top: 5px;
-  width: 780px;
-  }
-
-  main {
-    float: left;
-    width: 530px;
-    padding: 10px 10px 10px 0;
-  }
-
-  aside#sidebar {
-    float: left;
-    width: 230px;
-    background-color: #e8ffff;
-    padding: 5px;
-  }
-
-  header {
-    height: 60px;
-    background-color: red;
-    width: 780px;
-    position: fixed;
-    border-top: 4px solid #6bb;
-    padding-top: 4px;
-  }
-  ul.account-menu {
-    text-align: left;
-    margin-left: 30px;
-    margin-top: -15px;
-  }
-
-  footer {
-    clear: both;
-    color: #888;
-    padding: 8px 0;
-    border-top: 4px solid #6bb;
-  }
-  footer nav ul li:not(:last-child):after {
-    color: #888;
-    content: " | ";
-    margin: 0 5px;
-  }
-  .git {
-  font-size: 17px;
-  margin-left: 50px;
-  margin-top: 0px;
-  }
-  .copyright {
-  font-size: 17px;
-  float: right;
-  margin-top: -38px;
-  margin-right: 216px;
-  }
-
-  nav.menubar {
-    height: 50px;
-    padding-top: 10px;
-    padding-left: 20px;
-    background-color: #000;
-    color: #ccc;
-    font-size: 23px;
-  }
-  nav.menubar ul li:not(:last-child):after {
-    color: #ccc;
-    content: " | ";
-    margin: 0 2px;
-  }
-
-  nav.menubar a { text-decoration: none; }
-
-  nav.menubar a:link { color: #ccc; }
-
-  nav.menubar a:visited { color: #ccc; }
-
-  nav.menubar a:hover {
-    color: #f88;
-    text-decoration: underline;
-  }
-
-  nav.menubar span {
-    color: #ff8;
-    font-weight: bold;
-  }
-
-  main {
-  margin-top: 170px;
-  }
-  main h1 {
-    color: #88c;
-    font-weight: normal;
-    margin-bottom: 0.5em;
-    width: 780px;
-  }
-  main h2 {
-    color: #99d;
-    font-weight: bold;
-    font-size: 120%;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid #ccf;
-  }
-  main p {
-    font-size: 90%;
-    line-height: 1.5;
-  }
-  ul.toolbar,
-  div.toolbar {
-    padding: 15px 0;
-    font-size: 90%;
-    text-align: right;
-  }
-  ul.toolbar li:not(:last-child):after {
-    color: #888;
-    content: " | ";
-    margin: 0 2px;
-  }
-
-  .admin-title {
-    width: 370px;
-    margin-top: 0px;
-    margin-left: 205px;
-    font-size: 30px;
-  }
-  .for-admin {
-    color: red;
+  
+  .btn {
     font-size: 15px;
+    height: 35px;
+    width: 80px;
+  }
+  
+  .btn-blue {
+    margin: 20px 0;
     text-align: center;
-    background-color: rgba( 123,215,249 , 0.45 );
-  }
-  .user-login {
-    color: red;
-    font-size: 15px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-  }
-.in-name {
-  width: 200px;
-  height: 25px;
-  margin-top: 10px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  color: black;
-  font-size: 15px;
-  }
-.user-pass {
-  font-size: 15px;
-  color: red;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  }
-  .in-pass {
-  width: 200px;
-  height: 25px;
-  margin-top: 10px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  color: black;
-  font-size: 20px;
-  }
-
-  .bu-login {
-  font-size: 10px;
-  color: black;
-  display: block;
-  height: 25px;
-  width: 70px;
-  margin-top: -10px;
-  margin-left: 205px;
-  }
-  aside#sidebar h2 {
-    color: #080;
-    font-weight: bold;
-    border-bottom: 1px dotted #080;
-    margin-bottom: 0.5em;
-  }
-  aside#sidebar ul {
-    padding-left: 1em;
-    list-style-type: none;
-  }
-  aside#sidebar li {
-    margin-bottom: 0.3em;
-  }
-  .profile-title {
-    color: red;
-    margin-left: -30px;
-    border-bottom: 2px solid #88c;
-    text-align: center;
-    width: 780px;
-  }
-  .logos {
-    height: 60px;
-    width: 300px;
-    margin-top: -0.4em;
-    padding: 4px;
-    margin-left: -4px;
   }
 }

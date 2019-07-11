@@ -1,135 +1,176 @@
-@media screen and (min-width:780px) and ( max-width:812px) {
-  .entry-table {
-    width: 600px;
-    height: 600px;
-    text-align: center;
-    margin-left: 90px;
+/* 表：一覧表示、詳細表示 */
+table.list {
+  font-size: 90%;
+  width: 100%;
+  text-align: center;
+  margin: 30px 25%;
+}
+
+table.attr, table.attr__account_edit {
+  font-size: 90%;
+  width: 100%;
+  text-align: center;
+  margin: 0 25%;
+}
+
+table.attr__image {
+  font-size: 90%;
+  width: 600px;
+  height: 100px;
+  text-align: center;
+  margin: 0 80px;
+  table-layout: fixed;
+  margin-top: -120px;
+}
+
+table.list th, table.attr th,
+table.attr__image th, table.attr__account_edit th {
+  background-color: rgba( 173,255,47 , 0.54 );
+  color: red;
+  font-weight: normal;
+}
+
+table.list td, table.list th,
+table.attr td, table.attr th,
+table.attr__account_edit td, table.attr__account_edit th {
+  padding: 4px;
+}
+
+table.list th {
+  text-align: center;
+}
+
+table.attr th, table.attr__image th,
+table.attr__account_edit th {
+  text-align: center;
+}
+
+table.list td, table.attr td,
+table.attr__image td, table.attr__account_edit td {
+  background-color: rgba( 255,255,240 , 0.36 );
+}
+
+.self__introduction {
+  width: 500px;
+  margin: 25px 140px;
+  background-color: rgba( 255,255,240 , 0.36 );
+  &_discription {
+    margin: 0 20px; 
   }
-  table.entry-table th {
-    color :red;
-    font-size: 25px;
+}
+
+.se
+
+.tools {
+  margin-top: -100px;
+}
+
+@media (max-width: 670px) {
+  /* 表：一覧表示、詳細表示 */
+  table.list {
+    font-size: 90%;
+    width: 100%;
     text-align: center;
-    background-color: rgba( 173,255,47 , 0.54 );
- }
-  table.entry-table td {
+    margin: 30px auto;
+  }
+
+  table.attr {
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    table-layout: fixed;
+  }
+
+  table.attr__image {
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+    margin: -100px auto 0;
+    table-layout: fixed;
+  }
+
+  table.list td, table.attr td,
+  table.attr__image td {
     background-color: rgba( 255,255,240 , 0.36 );
   }
-  .text-form {
-    height: 30px;
-  }
-  .area-form {
-    height: 160px;
-  }
-  .btn {
-    font-size: 25px;
-    height: 45px;
+
+  table.list th, table.attr th,
+  table.attr__image th {
+    background-color: rgba( 173,255,47 , 0.54 );
+    color: red;
+    font-weight: normal;
     width: 100px;
   }
-  .btn-set {
-    margin-bottom: 20px;
-  }
-  .admin-table {
-    width: 700px;
-    height: 600px;
-    margin-left: 40px;
-  }
-  .btn-admin {
-    margin-left: 40px;
-    padding-bottom: 10px;
-  }
-  .chkbox {
-	width: 24px;
-	height: 24px;
-	-moz-transform: scale(1.4);
-	-webkit-transform: scale(1.4);
-	transform: scale(1.4);
-  }
-  .introduce {
-    font-size: 25px;
-    padding-left: 5px;
-  }
-}
 
-@media screen and (min-width:960px) and ( max-width:1280px) {
-  .entry-table {
-    width: 600px;
-    height: 300px;
+  table.attr__account_edit {
+    font-size: 90%;
+    width: 95%;
     text-align: center;
-    margin-left: 90px;
+    margin: 30px auto;
+    table-layout: fixed;
   }
-  table.entry-table th {
-    color :red;
-    text-align: center;
+
+  table.attr__account_edit th {
     background-color: rgba( 173,255,47 , 0.54 );
+    color: red;
+    font-weight: normal;
+    width: 180px;
+    padding: 4px;
+    text-align: center;
   }
-  table.entry-table td {
+
+  table.list td, table.list th,
+  table.attr td, table.attr th,
+  table.attr__image td, table.attr__image th {
+    padding: 4px;
+  }
+
+  table.list th {
+    text-align: center;
+  }
+
+  table.attr th, table.attr__image th {
+    text-align: center;
+  }
+
+  table.list td, table.attr td {
     background-color: rgba( 255,255,240 , 0.36 );
   }
-  .text-form {
-    height: 20px;
-    width: 250px;
-  }
-  .area-form {
-    height: 100px;
-    width: 350px;
-  }
-  .btn {
-    font-size: 10px;
-    height: 20px;
-    width: 50px;
-    padding-bottom: 20px;
-  }
-  .admin-table {
-    width: 600px;
-    height: 250px;
-    margin-left: 40px;
-  }
-  .btn-admin {
-    margin-left: 40px;
-    padding-bottom: 10px;
-  }
-}
 
-@media screen and (min-width:1281px) {
-  .entry-table {
-    width: 600px;
-    height: 300px;
-    text-align: center;
-    margin-left: 90px;
+  .self__introduction {
+    width: 100%;
+    margin: 10px auto;
+    background-color: rgba( 255,255,240 , 0.36 ); 
   }
-  table.entry-table th {
-    color :red;
-    text-align: center;
-    background-color: rgba( 173,255,47 , 0.54 );
- }
-  table.entry-table td {
-    background-color: rgba( 255,255,240 , 0.36 );
+
+  .tools {
+    margin-top: -100px;
   }
-  .text-form {
-    height: 20px;
-    width: 250px;
+
+  #entry_title {
+    width: 200px;
   }
-  .area-form {
-    height: 100px;
-    width: 350px;
+
+  #entry_posted_at_1i, #entry_posted_at_2i,
+  #entry_posted_at_3i, #entry_posted_at_4i,
+  #entry_posted_at_5i {
+    font-size: 9px;
   }
-  .btn {
+
+  #entry_body {
+    width: 240px;
+  }
+
+  #entry_status {
     font-size: 10px;
-    height: 20px;
-    width: 50px;
-    padding-bottom: 20px;
   }
-  .admin-table {
-    width: 600px;
-    height: 250px;
-    margin-left: 40px;
+
+  #member_email {
+    width: 170px;
   }
-  .btn-admin {
-    margin-left: 40px;
-    padding-bottom: 10px;
-  }
-  .introduce {
-    font-size: 20px;
-    padding-left: 10px;
+
+  #account_email {
+    width: 170px;
   }
 }

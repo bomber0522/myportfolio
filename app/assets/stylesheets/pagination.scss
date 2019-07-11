@@ -1,44 +1,27 @@
-@media screen and (min-width:780px) and ( max-width:812px) {
-  nav.pagination {
-    font-size: 35px;
-    width: 350px;
-    padding: 4px 20px;
-    margin-left: 20px;
-    border: 1px solid #499;
-    word-spacing: 12px;
-    text-align: center;
-  }
-  nav.pagination span.current {
+$border-color: #499;
+
+nav.pagination {
+  font-size: 75px;
+  padding: 4px 8px;
+  border: 1px solid $border-color;
+  word-spacing: 4px;
+
+  span.current {
     font-weight: bold;
   }
 }
 
-@media screen and (min-width:960px) and ( max-width:1280px){
-  nav.pagination {
-    font-size: 15px;
-    width: 230px;
-    padding: 4px 20px;
-    margin-left: 8px;
-    border: 1px solid #499;
-    word-spacing: 12px;
-    text-align: center;
-  }
-  nav.pagination span.current {
-    font-weight: bold;
-  }
-}
+@media (max-width: 670px) {
+  $border-color: #499;
 
-@media screen and (min-width:1281px){
   nav.pagination {
-    font-size: 15px;
-    width: 230px;
-    padding: 4px 20px;
-    margin-left: 8px;
-    border: 1px solid #499;
-    word-spacing: 12px;
-    text-align: center;
-  }
-  nav.pagination span.current {
-    font-weight: bold;
+    font-size: 75px;
+    padding: 4px 8px;
+    border: 1px solid $border-color;
+    word-spacing: 4px;
+  
+    span.current {
+      font-weight: bold;
+    }
   }
 }

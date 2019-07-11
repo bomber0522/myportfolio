@@ -21,7 +21,7 @@ module EntriesHelper
     content_tag(:div) do
       image_tag image.data.variant(resize: "330x>"),
         alt: image.alt_text,
-        style: "display: block; margin: 0 auto 15px"
+        style: "display: block; margin: 20px auto"
     end
   end
 end
